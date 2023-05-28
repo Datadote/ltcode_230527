@@ -2,7 +2,7 @@ class Solution:
     def isPalindrome(self, s: str) -> bool:
         alpha_num = 'abcdefghijklmnopqrstuvwxyz0123456789'
         tmp = ''
-        s = s.lower()#.strip()
+        s = s.lower()
         s = [str(c) for c in s]
         for c in s:
             if c in alpha_num:
