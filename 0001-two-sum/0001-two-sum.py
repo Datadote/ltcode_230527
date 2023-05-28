@@ -5,5 +5,4 @@ class Solution:
             diff = target - n
             if diff in d:
                 return (i, d[diff])
-            else:
-                d[n] = i
+            d[n] = i
