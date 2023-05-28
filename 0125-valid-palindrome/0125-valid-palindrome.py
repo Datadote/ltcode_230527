@@ -3,7 +3,6 @@ class Solution:
         alpha_num = 'abcdefghijklmnopqrstuvwxyz0123456789'
         tmp = ''
         s = s.lower()
-        # s = list(s)
         for c in s:
             if c in alpha_num:
                 tmp += c
