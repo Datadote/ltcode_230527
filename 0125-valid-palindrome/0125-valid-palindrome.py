@@ -3,7 +3,7 @@ class Solution:
         alph_num = 'abcdefghijklmnopqrstuvwrxyz0123456789'
         L, R = 0, len(s)-1
         while L < R:
-            while L < R and  s[L].lower() not in alph_num:
+            while L < R and s[L].lower() not in alph_num:
                 L += 1
             while L < R and s[R].lower() not in alph_num:
                 R -= 1
