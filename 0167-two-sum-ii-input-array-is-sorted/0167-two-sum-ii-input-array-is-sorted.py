@@ -4,9 +4,9 @@ class Solution:
         while L<R:
             if numbers[L]+numbers[R] == target:
                 return [L+1, R+1]
-            while L<R and (numbers[L]+numbers[R] < target):
+            while (numbers[L]+numbers[R] < target):
                 L += 1
                 continue
-            while L<R and (numbers[L]+numbers[R] > target):
+            while (numbers[L]+numbers[R] > target):
                 R -= 1
                 continue
