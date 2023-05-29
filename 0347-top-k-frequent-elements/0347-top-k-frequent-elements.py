@@ -4,7 +4,7 @@ class Solution:
         for n in nums:
             d[n] += 1
             
-        topk = sorted(d.items(), key = lambda x: x[1], reverse=True)
+        topk = sorted(d.items(), key = lambda x: x[1])[::-1]
         topk = [x[0] for x in topk[:k]]
         return topk
         
