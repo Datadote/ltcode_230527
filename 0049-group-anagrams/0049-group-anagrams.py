@@ -4,8 +4,9 @@ class Solution:
         for s in strs:
             count = [0]*26
             for c in s:
-                index = ord(c) - ord('a')
-                count[index] += 1
+                # index = ord(c) - ord('a')
+                # count[index] += 1
+                count[ord(c) - ord('a')] += 1
             d[tuple(count)].append(s)
         return d.values()
         
