@@ -6,8 +6,8 @@ class Solution:
             tmp *= n
             prefix.append(tmp)
         tmp = 1
-        for i in range(len(nums)-1, -1, -1):
-            tmp *= nums[i]
+        for n in nums[::-1]:
+            tmp *= n
             postfix.append(tmp)
         postfix = postfix[::-1]
         postfix.append(1)
