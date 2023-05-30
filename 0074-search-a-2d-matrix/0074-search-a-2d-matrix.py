@@ -10,9 +10,6 @@ class Solution:
             else:
                 break
         row = M
-        # print(L, R, row)
-        # if not (L <= R):
-        #     return False
         L, R = 0, len(matrix[row])-1
         while L <= R:
             M = L + (R-L)//2
@@ -22,5 +19,4 @@ class Solution:
                 L = M + 1
             else:
                 R = M - 1
-            
         return False
