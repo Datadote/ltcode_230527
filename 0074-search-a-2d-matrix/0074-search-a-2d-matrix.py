@@ -10,8 +10,8 @@ class Solution:
                 R = M - 1
             else:
                 break
-        # print('*', L, R)
-        row = L + (R-L)//2
+        # row = L + (R-L)//2
+        row = M
         L, R = 0, len(matrix[0])-1
         while L <= R:
             M = L + (R-L)//2
