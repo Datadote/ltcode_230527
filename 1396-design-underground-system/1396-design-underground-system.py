@@ -9,8 +9,8 @@ class UndergroundSystem:
 
     def checkOut(self, id: int, stationName: str, t: int) -> None:
         start_station, start_time = self.d_cust[id]
-        avg_time = (t - start_time)
-        self.d_avg[(start_station, stationName)].append(avg_time)
+        duration = t - start_time
+        self.d_avg[(start_station, stationName)].append(duration)
 
     def getAverageTime(self, startStation: str, endStation: str) -> float:
         return sum(self.d_avg[(startStation, endStation)]) / len(self.d_avg[(startStation, endStation)])
