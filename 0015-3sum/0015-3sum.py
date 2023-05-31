@@ -7,8 +7,8 @@ class Solution:
                 break
             if i > 0 and nums[i] == nums[i-1]:
                 continue
-            L, R = i+1, len(nums)-1
             
+            L, R = i+1, len(nums)-1
             while L < R:
                 total = nums[i] + nums[L] + nums[R]
                 if total > 0:
