@@ -1,48 +1,22 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        # O(N*K), O(N*K)
         d = defaultdict(list)
         for s in strs:
-            k = tuple(sorted(s))
-            d[k].append(s)
+            key = [0]*26
+            for c in s:
+                idx = ord(c) - ord('a')
+                key[idx] += 1
+            d[tuple(key)].append(s)
         return d.values()
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+    
+        # O(N * klogk) O(N*K)
         # d = defaultdict(list)
         # for s in strs:
-        #     key = [0]*26
-        #     for c in s:
-        #         idx = ord(c) - ord('a')
-        #         key[idx] += 1
-        #     d[tuple(key)].append(s)
+        #     k = tuple(sorted(s))
+        #     d[k].append(s)
         # return d.values()
+    
     
     # d = defaultdict(list)
         # for s in strs:
