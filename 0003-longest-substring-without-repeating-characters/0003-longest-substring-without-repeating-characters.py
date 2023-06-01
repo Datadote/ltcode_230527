@@ -8,6 +8,5 @@ class Solution:
                 char_set.remove(s[L])
                 L += 1
             char_set.add(s[R])
-            # max_len = max(max_len, R-L+1)
             max_len = max(max_len, len(char_set))
         return max_len
