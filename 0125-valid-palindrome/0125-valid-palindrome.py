@@ -1,6 +1,6 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        alp_num = 'abcdefghijklmnopqrstuvwxyz0123456789'
+        alp_num = set('abcdefghijklmnopqrstuvwxyz0123456789')
         L, R = 0, len(s)-1
         while L <= R:
             if s[L].lower() not in alp_num:
