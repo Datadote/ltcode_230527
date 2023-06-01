@@ -9,7 +9,6 @@ class Solution:
             if s[R].lower() not in alp_num:
                 R -= 1
                 continue
-            # print(s[L].lower(), s[R].lower())
             if s[L].lower() != s[R].lower():
                 return False
             L += 1
