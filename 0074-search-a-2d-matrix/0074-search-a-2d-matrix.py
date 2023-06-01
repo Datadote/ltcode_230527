@@ -2,7 +2,6 @@ class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
         L, R = 0, len(matrix)-1
         while L <= R:
-            # print(L, R)
             M = L + (R-L)//2
             if target > matrix[M][-1]:
                 L = M + 1
@@ -14,12 +13,11 @@ class Solution:
         L, R = 0, len(matrix[0])-1
         while L <= R:
             M = L + (R-L)//2
-            # print(L, R, M, row)
             if target > matrix[row][M]:
                 L = M + 1
             elif target < matrix[row][M]:
                 R = M - 1
-            elif target == matrix[row][M]:
+            else:
                 return True
         return False
         
@@ -52,6 +50,32 @@ class Solution:
         
         
         
+        
+        
+        
+        
+        
+        
+        # L, R = 0, len(matrix)-1
+        # while L <= R:
+        #     M = L + (R-L)//2
+        #     if target > matrix[M][-1]:
+        #         L = M + 1
+        #     elif target < matrix[M][0]:
+        #         R = M - 1
+        #     else:
+        #         break
+        # row = M
+        # L, R = 0, len(matrix[0])-1
+        # while L <= R:
+        #     M = L + (R-L)//2
+        #     if target > matrix[row][M]:
+        #         L = M + 1
+        #     elif target < matrix[row][M]:
+        #         R = M - 1
+        #     elif target == matrix[row][M]:
+        #         return True
+        # return False
         
         # L, R = 0, len(matrix)-1
         # while L <= R:
