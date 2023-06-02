@@ -1,14 +1,13 @@
 class Solution:
     def isValid(self, s: str) -> bool:
+        dcheck = {')':'(', ']':'[', '}':'{'}
         stack = []
-        dR2L = {')':'(', ']':'[', '}':'{'}
         for c in s:
-            if c not in dR2L:
-                stack.append(c)
-            elif stack and dR2L[c]==stack.pop():
-                continue
+            if c in dcheck and stack:
+                if stack.pop() != dcheck[c]:
+                    return False
             else:
-                return False
+                stack.append(c)
         return len(stack) == 0
         
         
@@ -34,13 +33,19 @@ class Solution:
         
         
         
+        
+        
+        
+        
+        
+        
         # stack = []
-        # dR2L = {')':'(', '}':'{', ']':'['}
+        # dR2L = {')':'(', ']':'[', '}':'{'}
         # for c in s:
         #     if c not in dR2L:
         #         stack.append(c)
-        #     elif stack and dR2L[c] == stack.pop():
+        #     elif stack and dR2L[c]==stack.pop():
         #         continue
         #     else:
         #         return False
-        # return len(stack)==0
+        # return len(stack) == 0
