@@ -10,37 +10,7 @@ class Solution:
             else:
                 return M
         return -1
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+    
         # L, R = 0, len(nums)-1
         # while L <= R:
         #     M = L + (R-L)//2
