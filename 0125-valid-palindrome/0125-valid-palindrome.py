@@ -7,7 +7,6 @@ class Solution:
                 L += 1
             while L<R and s[R].lower() not in alp_num:
                 R -= 1
-            print(s[L].lower(), s[R].lower())
             if s[L].lower() != s[R].lower():
                 return False
             L += 1
