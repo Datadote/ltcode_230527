@@ -9,7 +9,7 @@ class Solution:
         resp, resq = [], []
         def dfs(root, t):
             if not root:
-                t.append(None)
+                t.append([])
                 return
             t.append(root.val)
             dfs(root.left, t)
