@@ -4,6 +4,43 @@ class Solution:
         for n in nums:
             if n in d:
                 return True
-            else:
-                d[n] = None
+            d[n] = None
         return False
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        # d = {}
+        # for n in nums:
+        #     if n in d:
+        #         return True
+        #     else:
+        #         d[n] = None
+        # return False
