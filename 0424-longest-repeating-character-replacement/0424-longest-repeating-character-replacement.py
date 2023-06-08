@@ -1,8 +1,8 @@
 class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
+        max_len = 0
         d = defaultdict(int)
         L = 0
-        max_len = 0
         for R in range(len(s)):
             d[s[R]] += 1
             while (R-L+1) - max(d.values()) > k:
@@ -45,6 +45,17 @@ class Solution:
         
         
         
+#         d = defaultdict(int)
+#         L = 0
+#         max_len = 0
+#         for R in range(len(s)):
+#             d[s[R]] += 1
+#             while (R-L+1) - max(d.values()) > k:
+#                 d[s[L]] -= 1
+#                 L += 1
+#             max_len = max(max_len, R-L+1)
+#         return max_len
+    
         # count = defaultdict(int)
         # res = 0
         # L = 0
