@@ -9,16 +9,9 @@ class Solution:
                 v = board[row][col]
                 if v == '.':
                     continue
-                if v in dr[row]:
+                if v in dr[row] or v in dc[col] or v in db[(row//3, col//3)]:
                     return False
-                else:
-                    dr[row].append(v)
-                if v in dc[col]:
-                    return False
-                else:
-                    dc[col].append(v)
-                if v in db[(row//3, col//3)]:
-                    return False
-                else:
-                    db[(row//3, col//3)].append(v)
+                dr[row].append(v)
+                dc[col].append(v)
+                db[(row//3, col//3)].append(v)
         return True
