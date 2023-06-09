@@ -19,39 +19,7 @@ class Solution:
                 dc[col].add(v)
                 db[(row//3, col//3)].add(v)
         return True
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
         # Can be done with defaultdict, set. Would use add instead of append
         # ROWS, COLS = len(board), len(board[0])
         # dr = defaultdict(list)
