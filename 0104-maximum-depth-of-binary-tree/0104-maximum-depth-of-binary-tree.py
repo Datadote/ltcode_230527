@@ -39,6 +39,15 @@ class Solution:
         
         
         
+        
+        
+        
+        # def dfs(root):
+        #     if not root:
+        #         return 0
+        #     return 1 + max(dfs(root.left), dfs(root.right))
+        # return dfs(root)
+
         # def dfs(root):
         #     if not root:
         #         return 0
