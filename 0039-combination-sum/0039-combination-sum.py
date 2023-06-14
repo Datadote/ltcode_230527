@@ -3,8 +3,8 @@ class Solution:
         res = []
         tmp = []
         def dfs(total, i):
-            if i >= len(candidates):
-                return
+            # if i >= len(candidates):
+            #     return
             if total == target:
                 res.append(tmp.copy())
                 return
