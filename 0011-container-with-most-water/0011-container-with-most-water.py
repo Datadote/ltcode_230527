@@ -1,5 +1,38 @@
 class Solution:
     def maxArea(self, height: List[int]) -> int:
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         max_a = 0
         L, R = 0, len(height)-1
         while L < R:
@@ -9,44 +42,7 @@ class Solution:
                 L += 1
             else:
                 R -= 1
-        return max_a
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        return max_a        
         
         # max_a = -math.inf
         # L, R = 0, len(height)-1
