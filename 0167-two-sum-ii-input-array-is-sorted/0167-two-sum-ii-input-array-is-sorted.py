@@ -1,12 +1,12 @@
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
-        L, R = 0, len(numbers)-1
-        while L <= R:
+        L, R = 0, len(numbers) - 1
+        while L < R:
             total = numbers[L] + numbers[R]
-            if target > total:
-                L += 1
-            elif target < total:
+            if total > target:
                 R -= 1
+            elif total < target:
+                L += 1
             else:
                 return [L+1, R+1]
         
@@ -44,6 +44,16 @@ class Solution:
         
         
         
+        
+        # L, R = 0, len(numbers)-1
+        # while L <= R:
+        #     total = numbers[L] + numbers[R]
+        #     if target > total:
+        #         L += 1
+        #     elif target < total:
+        #         R -= 1
+        #     else:
+        #         return [L+1, R+1]
         
         # L, R = 0, len(numbers)-1
         # while L <= R:
