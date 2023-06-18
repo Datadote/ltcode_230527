@@ -13,12 +13,12 @@ class Solution:
         while dq:
             tmp = []
             for i in range(len(dq)):
-                r = dq.popleft()
-                tmp.append(r.val)
-                if r.left:
-                    dq.append(r.left)
-                if r.right:
-                    dq.append(r.right)
+                node = dq.popleft()
+                tmp.append(node.val)
+                if node.left:
+                    dq.append(node.left)
+                if node.right:
+                    dq.append(node.right)
             res.append(tmp)
         return res
         
@@ -52,7 +52,21 @@ class Solution:
         
         
         
-        
+        # res = []
+        # dq = collections.deque()
+        # if root:
+        #     dq.append(root)
+        # while dq:
+        #     tmp = []
+        #     for i in range(len(dq)):
+        #         r = dq.popleft()
+        #         tmp.append(r.val)
+        #         if r.left:
+        #             dq.append(r.left)
+        #         if r.right:
+        #             dq.append(r.right)
+        #     res.append(tmp)
+        # return res
         
         # res = []
         # dq = collections.deque()
