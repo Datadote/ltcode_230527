@@ -22,36 +22,6 @@ class Solution:
             res.append(tmp)
         return res
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         # res = []
         # dq = collections.deque()
         # if root:
