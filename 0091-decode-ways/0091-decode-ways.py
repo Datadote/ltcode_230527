@@ -25,9 +25,9 @@ class Solution:
             if s[i] == '0':
                 return 0
             tmp = dfs(i+1)
-            if i + 1 < len(s) and (
-                s[i]=='1' or s[i]=='2' and s[i+1] in '0123456'
-               ):
+            if (i + 1 < len(s)
+                and (s[i]=='1' or s[i]=='2' and s[i+1] in '0123456'
+               )):
                 tmp += dfs(i+2)
             dp[i] = tmp
             return tmp
