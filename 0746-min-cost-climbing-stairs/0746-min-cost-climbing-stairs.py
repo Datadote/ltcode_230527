@@ -4,44 +4,47 @@ class Solution:
         for i in range(2, len(cost)):
             dp0, dp1 = dp1, min(dp0, dp1) + cost[i]
         return min(dp0, dp1)
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        # dp0, dp1 = cost[0], cost[1]
+        # for i in range(2, len(cost)):
+        #     dp0, dp1 = dp1, min(dp0, dp1) + cost[i]
+        # return min(dp0, dp1)
     
     # dp = [0, 0]
         # for i in range(len(cost)-1, -1, -1):
