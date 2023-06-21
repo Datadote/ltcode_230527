@@ -1,9 +1,7 @@
 class Solution:
     def climbStairs(self, n: int) -> int:
-        if n ==1 or n==2:
-            return n
-        dp0, dp1 = 1, 2
-        for i in range(n-2):
+        dp0, dp1 = 0, 1
+        for i in range(n):
             dp0, dp1 = dp1, dp0+dp1
         return dp1
         
@@ -41,10 +39,13 @@ class Solution:
         
         
         
-        
-        
-        
-        
+        # if n ==1 or n==2:
+        #     return n
+        # dp0, dp1 = 1, 2
+        # for i in range(n-2):
+        #     dp0, dp1 = dp1, dp0+dp1
+        # return dp1
+
         # # T: O(n), S: O(1)
         # def fibo2(n):
         #     if n==1 or n==2:
