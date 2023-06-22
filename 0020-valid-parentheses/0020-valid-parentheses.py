@@ -1,15 +1,15 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
-        dmap = {']': '[', '}': '{', ')': '('}
+        d = {')': '(', '}': '{', ']': '['}
         for c in s:
-            if c not in dmap:
+            if c not in d:
                 stack.append(c)
-            elif stack and stack.pop() == dmap[c]:
+            elif stack and d[c]==stack.pop():
                 continue
             else:
                 return False
-        return len(stack) == 0
+        return len(stack)==0
         
         
         
@@ -45,6 +45,18 @@ class Solution:
         
         
         
+        
+        
+        # stack = []
+        # dmap = {']': '[', '}': '{', ')': '('}
+        # for c in s:
+        #     if c not in dmap:
+        #         stack.append(c)
+        #     elif stack and stack.pop() == dmap[c]:
+        #         continue
+        #     else:
+        #         return False
+        # return len(stack) == 0
         
         # stack = []
         # dR2L = {']': '[', '}': '{', ')': '('}
