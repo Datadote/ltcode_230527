@@ -5,12 +5,11 @@ class Solution:
         def dfs(nopen, nclose):
             if nopen == nclose == n:
                 res.append(''.join(tmp))
-                return
             if nopen < n:
                 tmp.append('(')
                 dfs(nopen+1, nclose)
                 tmp.pop()
-            if nopen > nclose:
+            if nclose < nopen:
                 tmp.append(')')
                 dfs(nopen, nclose+1)
                 tmp.pop()
@@ -50,9 +49,23 @@ class Solution:
         
         
         
-        
-        
-        
+        # res = []
+        # tmp = []
+        # def dfs(nopen, nclose):
+        #     if nopen == nclose == n:
+        #         res.append(''.join(tmp))
+        #         return
+        #     if nopen < n:
+        #         tmp.append('(')
+        #         dfs(nopen+1, nclose)
+        #         tmp.pop()
+        #     if nopen > nclose:
+        #         tmp.append(')')
+        #         dfs(nopen, nclose+1)
+        #         tmp.pop()
+        # dfs(0, 0)
+        # return res
+
         # res = []
         # stack = []
         # def backtrack(nopen, nclose):
