@@ -7,6 +7,6 @@ class Solution:
             maxp = max(n, tmp, minp*n)
             minp = min(n, tmp, minp*n)
             res = max(res, maxp)
-            if n == 0:
-                maxp, minp = 1, 1
+            # if n == 0:
+            #     maxp, minp = 1, 1
         return res
