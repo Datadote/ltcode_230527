@@ -3,7 +3,7 @@ class Solution:
         total = sum(nums)
         if total % 2:
             return False
-        target = total // 2
+        target = total / 2
         sums = set()
         sums.add(0)
         for n in nums:
