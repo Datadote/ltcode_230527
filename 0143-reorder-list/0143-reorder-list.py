@@ -14,21 +14,18 @@ class Solution:
             fast = fast.next.next
         second = slow.next
         slow.next = None
-        
-        prev = None # second == cur
+        prev = None
         while second:
-            nxt = second.next
+            tmp = second.next
             second.next = prev
-            prev = second
-            second = nxt
-        
-        list1, list2 = head, prev
-        while list2:
-            tmp1, tmp2 = list1.next, list2.next
-            list1.next = list2
-            list2.next = tmp1
-            list1 = tmp1
-            list2 = tmp2
+            prev, second = second, tmp
+        first = head
+        second = prev
+        while second:
+            t1, t2 = first.next, second.next
+            first.next = second
+            second.next = t1
+            first, second = t1, t2
         
         
         
@@ -60,8 +57,27 @@ class Solution:
         
         
         
+#         slow, fast = head, head.next
+#         while fast and fast.next:
+#             slow = slow.next
+#             fast = fast.next.next
+#         second = slow.next
+#         slow.next = None
         
+#         prev = None # second == cur
+#         while second:
+#             nxt = second.next
+#             second.next = prev
+#             prev = second
+#             second = nxt
         
+#         list1, list2 = head, prev
+#         while list2:
+#             tmp1, tmp2 = list1.next, list2.next
+#             list1.next = list2
+#             list2.next = tmp1
+#             list1 = tmp1
+#             list2 = tmp2
         
 #         slow, fast = head, head.next
 #         while fast and fast.next:
