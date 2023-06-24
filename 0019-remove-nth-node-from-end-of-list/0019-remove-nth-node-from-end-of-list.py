@@ -6,8 +6,8 @@
 class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
         # p1 = p2 = ListNode()
-        dummy = p1 = p2 = ListNode()
-        p2.next = head
+        dummy = p1 = p2 = ListNode(next=head)
+        # p2.next = head
         for i in range(n):
             p2 = p2.next
         while p2.next:
