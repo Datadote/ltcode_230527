@@ -39,9 +39,6 @@ class LRUCache:
         self.cache[key] = Node(key, value)
         self.insert(self.cache[key])
         if len(self.cache) > self.cap:
-            lru = self.left.next
-            # self.remove(lru)
-            # del self.cache[lru.key]
             del self.cache[self.left.next.key]
             self.remove(self.left.next)
 
