@@ -15,8 +15,10 @@ class Solution:
             remainder = total % 10
             tail.next = ListNode(remainder)
             tail = tail.next
-            if l1: l1 = l1.next
-            if l2: l2 = l2.next
+            if l1:
+                l1 = l1.next
+            if l2:
+                l2 = l2.next
             
         if carry:
             tail.next = ListNode(1)
