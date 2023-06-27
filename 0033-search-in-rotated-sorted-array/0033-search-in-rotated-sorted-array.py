@@ -17,8 +17,6 @@ class Solution:
         
         
         def bsearch(nums, target, L, R):
-            # L, R = 0, len(nums)-1
-            # print('start', pivot, nums, L, R)
             while L <= R:
                 M = L + (R-L)//2
                 if target > nums[M]:
@@ -29,17 +27,13 @@ class Solution:
                     return M
             return -1
         
-        # B search left or right side depending on pivot
         pivot = find_pivot(nums)
-        # print(pivot,nums, target)
-        
         if target == nums[pivot]:
             return pivot
         if pivot == 0:
             return bsearch(nums, target, 0, len(nums)-1)
-        if target < nums[0]: # search right
-            # print('search right')
+        elif target < nums[0]: # search right
             return bsearch(nums, target, pivot+1, len(nums)-1)
-        else:
+        else: # search left
             return bsearch(nums, target, 0, pivot)
         
