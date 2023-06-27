@@ -39,7 +39,7 @@ class Solution:
             return bsearch(nums, target, 0, len(nums)-1)
         if target < nums[0]: # search right
             # print('search right')
-            return bsearch(nums, target, pivot, len(nums)-1)
+            return bsearch(nums, target, pivot+1, len(nums)-1)
         else:
             return bsearch(nums, target, 0, pivot)
         
