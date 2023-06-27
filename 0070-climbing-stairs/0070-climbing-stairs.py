@@ -2,7 +2,7 @@ class Solution:
     def climbStairs(self, n: int) -> int:
         dp0, dp1 = 0, 1
         for i in range(n):
-            dp0, dp1 = dp1, dp0+dp1
+            dp0, dp1 = dp1, dp0 + dp1
         return dp1
         
         
@@ -38,6 +38,14 @@ class Solution:
         
         
         
+        
+        
+        
+        
+        # dp0, dp1 = 0, 1
+        # for i in range(n):
+        #     dp0, dp1 = dp1, dp0+dp1
+        # return dp1
         
         # if n ==1 or n==2:
         #     return n
