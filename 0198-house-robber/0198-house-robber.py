@@ -1,9 +1,9 @@
 class Solution:
     def rob(self, nums: List[int]) -> int:
-        rob1, rob2 = 0, 0
+        dp0, dp1 = 0, 0
         for n in nums:
-            rob1, rob2 = rob2, max(rob1+n, rob2)
-        return rob2
+            dp0, dp1 = dp1, max(dp1, dp0 + n)
+        return dp1
         
         
         
@@ -41,6 +41,10 @@ class Solution:
         
         
         
+        # rob1, rob2 = 0, 0
+        # for n in nums:
+        #     rob1, rob2 = rob2, max(rob1+n, rob2)
+        # return rob2
         
         # dp0, dp1 = 0, nums[0]
         # for i in range(1, len(nums)):
